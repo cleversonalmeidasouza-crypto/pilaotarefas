@@ -1,0 +1,80 @@
+/* Apresentação em página longa (celular e computador). Usa as cores e componentes do estilo.css. */
+body.lg{padding-top:54px}
+.lg-topo{position:fixed;top:0;left:0;right:0;z-index:60;height:54px;display:flex;align-items:center;gap:10px;padding:0 16px;background:rgba(45,42,38,.96);backdrop-filter:blur(10px);color:#fff;font:700 1rem var(--titulo)}
+.lg-topo img{height:34px;width:auto}
+.lg-barra{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.12)}
+.lg-barra i{display:block;height:100%;width:0;background:var(--grad);transition:width .15s linear}
+
+/* capa */
+.lg-capa{padding:46px 0 70px}
+.lg-capa .contida{align-items:center}
+.lg-logo{height:96px;width:auto;margin:0 0 14px;filter:drop-shadow(0 10px 22px rgba(0,0,0,.4))}
+.lg-capa h1{font-size:clamp(2.2rem,8vw,4rem)}
+.role{margin:22px 0 0;display:flex;align-items:center;gap:10px;color:#F5B93B;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.8rem}
+.role i{font-style:normal;font-size:1.4rem;animation:desce 1.6s ease-in-out infinite}
+@keyframes desce{50%{transform:translateY(8px)}}
+.lg-hero-visual .celular{width:min(100%,260px)}
+
+/* passos (texto + imagem) */
+.lg-passo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:46px 0}
+.lg-passo+.lg-passo{border-top:1px solid var(--linha)}
+.lg-passo.inv .lg-texto{order:2}
+.lg-texto h2{margin-bottom:.4em}
+.lg-visual .duas-imagens .celular{width:min(46%,230px)}
+.secao.branca .lg-passo+.lg-passo{border-top-color:#EADFCB}
+.regra h3{margin-bottom:.25em}
+.regra p{color:#E8E0D3}
+.lg-regras{gap:20px}
+
+/* etapas do primeiro acesso */
+.lg-etapas{display:grid;gap:22px;margin-top:30px}
+.lg-etapa{display:grid;grid-template-columns:64px 1fr 220px;gap:22px;align-items:center;background:var(--creme);border:1px solid var(--linha);border-radius:26px;padding:24px}
+.lg-etapa .n{width:56px;height:56px;border-radius:50%;background:var(--grad);color:#fff;font:800 1.6rem var(--titulo);display:grid;place-items:center;box-shadow:0 12px 26px rgba(192,57,43,.35)}
+.lg-etapa .v .celular{width:min(100%,200px)}
+
+/* barra de progresso por pontos (computador) */
+.lg-pontos{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:10px}
+.lg-pontos span{width:10px;height:10px;border-radius:50%;background:rgba(122,114,104,.4);transition:all .25s}
+.lg-pontos span.ativo{background:var(--paprica);transform:scale(1.5)}
+@media (max-width:1100px){.lg-pontos{display:none}}
+
+/* final */
+.lg-final{padding-bottom:90px}
+.botao.grande{padding:18px 30px;font-size:1.1rem;animation:pulsa-botao 2.2s ease-in-out infinite}
+@keyframes pulsa-botao{50%{box-shadow:0 12px 40px rgba(232,163,23,.65)}}
+.peq{font-size:.9rem;color:#CFC6B8}
+.lg-final .cartao{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#fff}
+.lg-final .cartao p{color:#E8E0D3}
+
+/* ---------- celular ---------- */
+@media (max-width:860px){
+  body.lg{font-size:17px}
+  .secao{padding:56px 0}
+  .contida{padding:0 20px}
+  .capa .contida{grid-template-columns:1fr}
+  .lg-hero-visual{margin-top:10px}
+  .lg-passo{grid-template-columns:1fr;gap:26px;padding:34px 0}
+  .lg-passo.inv .lg-texto{order:0}
+  .lg-visual .celular{width:min(68vw,264px)}
+  .lg-visual .duas-imagens .celular{width:min(44vw,200px)}
+  .lg-etapa{grid-template-columns:1fr;gap:14px;padding:20px}
+  .lg-etapa .v .celular{width:min(60vw,220px)}
+  .lg-etapa .n{width:48px;height:48px;font-size:1.3rem}
+  .lg-topo span{font-size:.95rem}
+  .botao{width:100%;justify-content:center}
+  .lg-final .botao.grande{width:100%}
+  .tabela td.s,.tabela th.s{width:auto}
+}
+.lg-cel .lg-capa{padding-top:34px}
+.lg-cel .celular img{width:100%;display:block}
+.lg-cel .numeros b{font-size:2.3rem}
+
+/* movimento extra: cartões sobem do fundo e a capa mexe com a rolagem */
+.lg-capa .fundo-cartoes{opacity:.3}
+.lg-capa .lg-hero-visual{transform:translateY(calc(var(--rolou,0) * -22px))}
+@media (prefers-reduced-motion:reduce){.role i,.botao.grande{animation:none}.lg-capa .lg-hero-visual{transform:none}}
+
+/* com width/height no HTML, o navegador reserva o espaço; height:auto mantém a proporção */
+.celular img,.notebook .tela img{height:auto}
+
+.lg-texto .selo{display:inline-block;font:700 .8rem var(--fonte);letter-spacing:.08em;text-transform:uppercase;color:var(--paprica);margin-bottom:8px}

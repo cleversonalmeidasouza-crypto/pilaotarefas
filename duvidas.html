@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dúvidas · Pilão Tarefas</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Pilão Tarefas: passe a tarefa, acompanhe o andamento e veja na hora o que travou.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/estilo.css">
+
+</head>
+<body>
+<header class="topo"><div class="contida">
+  <a class="marca" href="resumo.html"><img src="img/logo.png" alt="Pilão"><span>Pilão Tarefas</span></a>
+  <button class="botao-menu" aria-label="Abrir menu">☰ Menu</button>
+  <nav class="menu"><a href="resumo.html">Resumo</a><a href="problema.html">Problema</a><a href="metodo.html">Método</a><a href="acesso.html">1º acesso</a><a href="papeis.html">Papéis</a><a href="funcionalidades.html">Tour</a><a href="dia-a-dia.html">Rotina</a><a href="limites.html">Limites</a><a href="demo.html">Experimente</a><a href="duvidas.html" class="atual">Dúvidas</a></nav>
+</div></header>
+
+<section class="cabecalho-pagina"><div class="contida"><span class="etiqueta">Dúvidas</span><h1>Perguntas frequentes</h1><p>As dúvidas mais comuns e a resposta curta para cada uma.</p></div></section>
+
+<section class="secao"><div class="contida estreita">
+  <details open><summary>Esqueci a senha. E agora?</summary><div>Peça ao dono. Em <b>Usuários</b> ele escolhe a pessoa e gera uma nova senha provisória, que é entregue por mensagem. No próximo acesso você cria uma senha nova. Se o acesso estiver bloqueado por muitas tentativas, isso também é desfeito.</div></details>
+  <details><summary>O app está lento. O que fazer?</summary><div>Cada ação leva de 1 a 2 segundos, e isso é normal. Se estiver bem mais lento, aperte <b>Atualizar</b> ou recarregue a página (F5). Se a internet do celular estiver fraca, tente o Wi-Fi.</div></details>
+  <details><summary>Não recebi o e-mail de aviso.</summary><div>Olhe a caixa de spam. Lembre que o dono escolhe quais avisos ficam ligados (nova tarefa e comentário vêm ligados; tarefa travada e prazo precisam ser ligados). Dentro do app, o sininho sempre avisa as novidades.</div></details>
+  <details><summary>Posso usar no computador da empresa?</summary><div>Pode, com qualquer navegador. Em computador compartilhado, clique em <b>Sair</b> ao terminar.</div></details>
+  <details><summary>Preciso baixar algum aplicativo?</summary><div>Não. Abre no navegador do celular e do computador. Se quiser, dá para pôr um atalho na tela inicial (veja a página "Primeiro acesso").</div></details>
+  <details><summary>E se eu precisar de ajuda ou de uma mudança?</summary><div>Dúvidas e ajustes são combinados diretamente com quem desenvolveu o app.</div></details>
+  <details><summary>E se eu desativar um funcionário?</summary><div>Ele é desconectado na hora e não consegue mais entrar. As tarefas e o histórico dele continuam guardados.</div></details>
+  <details><summary>Quem vê as minhas tarefas?</summary><div>Funcionário vê só as dele. O dono vê todas. Ninguém vê a senha de ninguém.</div></details>
+  <details><summary>Posso ter mais de um dono?</summary><div>Sim. O app só não permite ficar sem nenhum dono ativo.</div></details>
+  <details><summary>Os dados ficam seguros?</summary><div>Ficam numa planilha do Google na conta da empresa. As senhas são guardadas de forma protegida (nem o dono as vê), e as permissões são conferidas no servidor.</div></details>
+</div></section>
+
+<section class="secao branca"><div class="contida">
+  <h2 class="centro revela">Você já sabe usar o Pilão Tarefas?</h2>
+  <p class="sub centro revela" style="margin:0 auto 28px">Cinco perguntas rápidas, só por diversão.</p>
+  <div class="quiz revela" id="quiz"></div>
+</div></section>
+<script>window.PERGUNTAS = [{"p":"Uma pessoa não consegue avançar numa tarefa porque o sistema caiu. O que ela deve fazer?","o":["Esperar o sistema voltar sem avisar","Marcar a tarefa como Travada e escrever o motivo","Mandar mensagem no WhatsApp e esquecer"],"c":1,"e":"Travada com motivo deixa o problema à vista, em vermelho, no painel do dono."},{"p":"Quantas tarefas cada pessoa pode ter ao mesmo tempo em \"Fazendo\"?","o":["No máximo 3","Quantas quiser","Só 1"],"c":0,"e":"O limite de 3 ajuda a terminar uma tarefa antes de começar outra."},{"p":"O que é preciso para marcar uma tarefa como Concluída?","o":["Só clicar em Concluída","Todos os itens do checklist marcados","Pedir autorização por e-mail"],"c":1,"e":"Se a tarefa tem checklist, todos os itens precisam estar marcados. Isso é a \"definição de pronto\"."},{"p":"O selo NOVO numa tarefa some quando...","o":["Passa 1 hora","A pessoa abre a tarefa","O dono apaga"],"c":1,"e":"Ele só some quando você abre a tarefa, então ninguém perde uma novidade sem querer."},{"p":"Um funcionário esqueceu a senha. Quem resolve?","o":["O dono, gerando uma nova senha provisória","Ele mesmo, pela planilha","Não tem solução"],"c":0,"e":"O dono gera uma senha provisória em Usuários, e a pessoa cria a própria senha ao entrar."}];</script>
+<footer class="rodape"><div class="contida">
+  <div style="display:flex;gap:16px;align-items:center"><img src="img/logo.png" alt="Pilão"><div><b style="color:#fff">Pilão Tarefas</b><br>Nenhuma demanda esquecida.</div></div>
+  <div>Feito sob medida para a Tempero Pilão · <a href="slides.html" style="color:#F5B93B">Ver em modo slides</a> · <a href="javascript:window.print()" style="color:#F5B93B">Salvar em PDF</a></div>
+</div></footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

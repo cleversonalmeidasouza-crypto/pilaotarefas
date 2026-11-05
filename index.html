@@ -1,1 +1,21 @@
-<!DOCTYPE html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=publicar/"><title>Pilão Tarefas</title><a href="publicar/">Abrir a apresentação</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pilão Tarefas · Apresentação</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#2D2A26;color:#fff;font-family:system-ui,sans-serif;text-align:center;padding:24px}a{display:inline-block;margin:6px;padding:14px 24px;border-radius:99px;background:linear-gradient(135deg,#E8A317,#C0392B);color:#fff;font-weight:700;text-decoration:none}img{height:90px;margin-bottom:12px}</style>
+</head>
+<body>
+<div><img src="img/logo.png" alt="Pilão"><h1>Pilão Tarefas</h1><p>Abrindo a apresentação…</p><p><a href="celular.html">Versão para celular</a><a href="computador.html">Versão para computador</a></p></div>
+<script>
+(function () {
+  var v = new URLSearchParams(location.search).get('v');
+  var movel = window.matchMedia('(max-width: 860px)').matches || (window.matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 820);
+  var alvo = v === 'pc' ? 'computador.html' : v === 'cel' ? 'celular.html' : (movel ? 'celular.html' : 'computador.html');
+  location.replace(alvo);
+})();
+</script>
+</body>
+</html>
