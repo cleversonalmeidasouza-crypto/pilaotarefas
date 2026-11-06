@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2D2A26">
+<title>Pilão Tarefas · Novidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/estilo.css">
+<link rel="stylesheet" href="assets/longa.css">
+<style>
+.passos-foto{display:grid;gap:12px;margin:18px 0 0;padding:0;list-style:none;counter-reset:p}
+.passos-foto li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--linha,#EBE2D2);border-radius:16px;padding:14px 16px}
+.passos-foto b{display:block}
+.passos-foto .ic{font-size:1.6rem;line-height:1.2}
+.nota-privacidade{margin-top:16px;padding:12px 16px;border-radius:14px;background:#FFF4D9;color:#6b4a00;font-weight:600;font-size:.95rem}
+.faixa-cel{display:flex;gap:16px;justify-content:center;align-items:flex-start;margin-top:28px;flex-wrap:nowrap}
+.faixa-cel .com-legenda{flex:0 0 auto;width:min(31%,250px)}
+.faixa-cel .celular{width:100%}
+@media(max-width:719px){.faixa-cel{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 4px 12px;margin-left:-4px;margin-right:-4px}.faixa-cel .com-legenda{width:68%;scroll-snap-align:center}}
+.eq-duo{display:grid;gap:26px;justify-items:center;margin-top:30px}
+.eq-duo .celular{width:min(100%,250px)}
+.eq-duo .notebook{width:100%}
+@media(min-width:900px){.eq-duo{grid-template-columns:minmax(0,1.9fr) minmax(0,.8fr);align-items:center;justify-items:stretch}.eq-duo .celular{margin:0 auto}}
+</style>
+</head>
+<body class="lg lg-cel">
+<header class="lg-topo"><img src="img/logo.png" alt="Pilão"><span>Pilão Tarefas</span><div class="lg-barra"><i id="lg-prog"></i></div></header>
+<main>
+<section class="capa lg-capa" id="topo">
+  <div class="fundo-cartoes"></div>
+  <div class="contida">
+    <div>
+      <img class="lg-logo" src="img/logo.png" alt="Pilão">
+      <span class="etiqueta">Novidade</span>
+      <h1>Cada serviço com <span class="grad-texto">foto, local e hora.</span></h1>
+      <p class="lead">A equipe tira a foto no celular, e o app escreve nela o endereço, a data e a hora. Quem acompanha vê tudo na hora.</p>
+      <p class="role"><span>Role para baixo</span><i>↓</i></p>
+    </div>
+    <div class="flutua lg-hero-visual"><div class="celular"><img src="img/n_cel_tarefa_foto.png" alt="Foto do serviço na tarefa, com o endereço" width="780" height="1688" loading="lazy"></div></div>
+  </div>
+</section>
+
+<section class="secao" id="foto"><div class="contida">
+  <div class="centro"><h2 class="revela">Como funciona</h2><p class="sub revela">Três passos, direto no celular, sem instalar nada.</p></div>
+  <ol class="passos-foto revela" style="max-width:40rem;margin:18px auto 0">
+    <li><span class="ic">📷</span><div><b>1. Tira a foto na hora</b>Dentro da tarefa, toca em <b style="display:inline">Foto do serviço</b>. A câmera abre.</div></li>
+    <li><span class="ic">📍</span><div><b>2. O app carimba</b>O endereço, a data e a hora ficam escritos na própria imagem.</div></li>
+    <li><span class="ic">🔔</span><div><b>3. O dono é avisado</b>Aparece uma faixa roxa na tela Equipe, e a tarefa sobe no Quadro com a marca "Foto nova".</div></li>
+  </ol>
+  <div class="faixa-cel revela">
+    <figure class="com-legenda"><div class="celular"><img src="img/n_cel_foto_card.png" alt="Aviso de foto nova na tela Equipe" width="780" height="1688" loading="lazy"></div><figcaption>O aviso chega</figcaption></figure>
+    <figure class="com-legenda"><div class="celular"><img src="img/n_cel_tarefa_foto.png" alt="Foto do serviço com o endereço" width="780" height="1688" loading="lazy"></div><figcaption>A foto, com o local</figcaption></figure>
+    <figure class="com-legenda"><div class="celular"><img src="img/n_cel_quadro.png" alt="Quadro com a marca Foto nova" width="780" height="1688" loading="lazy"></div><figcaption>No Quadro, em destaque</figcaption></figure>
+  </div>
+  <p class="nota-privacidade revela" style="max-width:40rem;margin:22px auto 0">🔒 O local é pego <b>só no instante da foto</b>. O app não acompanha ninguém durante o dia. Foto da galeria não vale: precisa ser tirada na hora.</p>
+</div></section>
+
+<section class="secao branca" id="equipe"><div class="contida">
+  <div class="centro"><h2 class="revela">E uma tela nova: a Equipe</h2><p class="sub revela">Uma linha por pessoa, com o que está fazendo agora. Quem tem tarefa travada ou atrasada aparece primeiro, e a foto nova ganha uma faixa roxa.</p></div>
+  <div class="eq-duo revela">
+    <figure class="com-legenda"><div class="notebook moldura"><div class="tela moldura"><img src="img/n_pc_equipe.png" alt="Tela Equipe no computador" width="1280" height="860" loading="lazy"></div><div class="base"></div></div><figcaption>No computador</figcaption></figure>
+    <figure class="com-legenda"><div class="celular"><img src="img/n_cel_equipe.png" alt="Tela Equipe no celular" width="780" height="1688" loading="lazy"></div><figcaption>No celular</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="secao escura centro lg-final" id="final"><div class="contida">
+  <span class="etiqueta">Próximo passo</span>
+  <h2 class="revela">Vamos testar juntos?</h2>
+  <p class="sub revela" style="margin:0 auto">Preparamos uma versão de teste com uma equipe de exemplo, só para você conhecer o app no seu celular. O acesso chega por mensagem.</p>
+</div></section>
+</main>
+<footer class="rodape"><div class="contida"><div style="display:flex;gap:16px;align-items:center"><img src="img/logo.png" alt="Pilão"><div><b style="color:#fff">Pilão Tarefas</b><br>Nenhuma demanda esquecida.</div></div><div>Feito sob medida para a Tempero Pilão</div></div></footer>
+<script src="assets/novidades.js"></script>
+</body>
+</html>
